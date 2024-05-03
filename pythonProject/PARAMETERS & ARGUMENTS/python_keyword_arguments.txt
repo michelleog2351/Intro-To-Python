@@ -1,0 +1,50 @@
+# KEYWORD ARGUMENTS
+
+# "John" and "Smith" strings are referred to as positional arguments
+# This means that their position or argument matters, changing their positions would change the results
+# "John," the first argument is the value for the first parameter "first_name"
+# "Smith," the second argument is the value for the second parameter "last_name"
+
+# In python, there are also keyword arguments and with these, the position doesn't really matter,
+# For example, let's say we want to pass "John" as a value for the first_name parameter, i.e. first_name="John"
+# This combination of having the parameter name followed by its value is called a keyword argument
+
+# Most of the time, we use positional arguments
+# In certain situations; keyword arguments help to improve the readability of our code,
+# Especially when dealing with functions that take numerical values
+
+def greet_user(first_name, last_name):
+    print(f"Hi {first_name} {last_name}!")
+    print("Welcome aboard")
+
+
+print("Start")
+greet_user(last_name="Smith", first_name="John")
+print("Finish")
+
+
+def greet_user(first_name, last_name):
+    print(f"Hi {first_name} {last_name}!")
+    print("Welcome aboard")
+
+
+# print("Start")
+# greet_user("Smith", first_name="John")
+# print("Finish")
+
+# greet_user("Smith", first_name="John")
+# TypeError: greet_user() got multiple values for argument 'first_name'
+
+# Positional arguments always come first before keyword arguments; otherwise there will be errors.
+def greet_user(first_name, last_name):
+    print(f"Hi {first_name} {last_name}!")
+    print("Welcome aboard")
+
+
+# print("Start")
+# greet_user(first_name="John", "Smith")
+# print("Finish")
+
+# greet_user(first_name="John", "Smith")
+#                                          ^
+# SyntaxError: positional argument follows keyword argument

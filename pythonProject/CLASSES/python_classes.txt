@@ -1,0 +1,43 @@
+# Classes
+# We use classes to define new types to model real concepts (i.e. shopping cart, animal)
+# Basic types include numbers, strings, boolean
+# More complex types include lists and dictionaries
+
+# How to define a new type called point
+
+# Pascal naming convention allows the first letter of classes' names to be capitalised
+
+# Add a colon which means we are going to define a block
+# In this block we can define all the methods and functions that belong to points
+
+# A class is the template or blueprint for creating objects
+# Objects are the actual instances based on that blueprint
+
+class Point:
+    def move(self):
+        print("move")
+
+    def draw(self):
+        print("draw")
+
+
+# To create an object we type out the name of our class and then call it like a function,
+# Let's put our object in a variable
+# Now we use the dot operator after our newly defined variable "point1",
+# We can see the two methods that we created in the class
+# There are also a bunch of other method listed with double underscores, these are called "magic methods"
+
+point1 = Point()
+
+point1.x = 10
+point1.y = 20
+print(point1.x)
+point1.draw()
+
+# Apart from methods, these objects can also have attributes
+# The attributes are like variables that belong to a particular object
+
+# Now we can create another object
+point2 = Point()
+point2.x = 1
+print(point2.x)

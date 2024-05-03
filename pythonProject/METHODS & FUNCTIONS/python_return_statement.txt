@@ -1,0 +1,29 @@
+# RETURN STATEMENT
+# How to create function that returns values
+
+# Define a function called square (calculates the square of a number)
+# Calculating number * number will help you find the square of a number
+# To return this number outside this function; we simply use the return statement
+# Now we can return values to the callers of our square function
+
+# def square(number):
+#    return number * number
+
+
+# result = square(3)
+# print(result)
+
+# We can also just pass the function called directly inside the print function without defining a separate variable
+# The value is passed as an argument to the print function
+# This is useful for producing shorter code
+def square(number):
+    return number * number
+
+
+print(square(3))
+
+# By default, all Python functions return None (if there is no return statement)
+# None is an object that represents the absence of a value
+
+
+

@@ -1,0 +1,13 @@
+# First Django Project
+
+
+# Fast, scalable and secure
+# A framework is a library of reusable modules (building blocks)
+# These modules provide functionality for common tasks
+# Eg. to work with http requests, urls, sessions, cookies etc..
+
+# A framework also defines a structure for our applications
+# It tells us what folders and files we should have in our project - providing a consistency among various Django projects
+
+
+# Ctrl +L to clear the terminal window.

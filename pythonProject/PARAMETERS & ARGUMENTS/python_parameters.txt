@@ -1,0 +1,29 @@
+# PARAMETERS
+# Placeholders that we define in our function for receiving information
+
+# We can pass the user's name by calling the greet_user function
+# The name parameter will be set to "John"
+# So it will act like a local variable that we defined inside of this function
+# We can reuse the greet_user function by passing it a different value (name)
+
+# NB!! When a function has a parameter, we are obligated to pass a value for that parameter
+# i.e. if we get rid of a "name" value and run the program,
+# There will be a TypeError because there is no value submitted into the function
+# TypeError: greet_user() missing 1 required positional argument: 'name'
+
+# An argument in programming is the value (or piece of information) that we supply to a function,
+#  e.g. "Mary" in this case, is an argument that we pass to the name "parameter"
+
+# We can also define multiple parameters,
+# We can pass a first_name and last_name
+# Shift + F6 for shortcut to change parameter name (refactor)!!
+
+def greet_user(first_name, last_name):
+    print(f"Hi {first_name} {last_name}!")
+    print("Welcome aboard")
+
+
+print("Start")
+greet_user("John", "Smith")
+greet_user("Mary", "O'Boyle")
+print("Finish")

@@ -1,0 +1,60 @@
+# Lists
+
+# These names are printed on the terminal
+names = ["John", "Bob", "Michelle", "Sarah", "Mary"]
+print(names)
+
+# We can also access an individual character in a string using an index
+names = ["John", "Bob", "Michelle", "Sarah", "Mary"]
+print(names[0])
+
+# To print out the third element in the list, it's index 2
+names = ["John", "Bob", "Michelle", "Sarah", "Mary"]
+print(names[2])
+
+# -1 refers to the last name of the list
+names = ["John", "Bob", "Michelle", "Sarah", "Mary"]
+print(names[-1])
+
+# Use the colon to select a range of items
+# This will get all the names starting from the index of "2" all the way to the end
+names = ["John", "Bob", "Michelle", "Sarah", "Mary"]
+print(names[2:])
+
+# We can also specify with an end index
+# This will include the names up to that index.
+# However, excluding the index
+# ['Michelle', 'Sarah']
+names = ["John", "Bob", "Michelle", "Sarah", "Mary"]
+print(names[2:4])
+
+# If both the start index and the end index are left out, the expression assumes 0 as the default index
+# And returns all the items from the beginning to the end of the list.
+
+# Just like strings, the square brackets don't modify the original list
+# They just return a new list
+
+# If we wanted to modify any of the elements in this list,
+# We can access the element using an index and set it to a new value
+names[0] = "Jon"
+print(names)
+
+********************************************************************
+# Write a program to find the largest number in a list
+numbers = [1, 4, 9, 16, 25]
+
+# We need to define a variable that will hold the largest number
+# Initially we are going to assume that the first item in this list is the largest variable.
+
+largest = numbers[0]
+
+# We need to iterate through this list of numbers and compare it with "largest"
+# If it is greater than "largest" then we need to reset max to that number
+
+for num in numbers:
+    if num > largest:
+        # If this number is greater than "largest" then we need to reset it 
+        largest = num
+print(f"Largest: {largest} ")
+
+	

@@ -1,0 +1,65 @@
+# For Loop
+# Used to iterate over items of a collection, such as a string.
+# A string is a sequence of characters, so it looks like a collection
+# The for loop can iterate over each character in a string and then do something with it
+# for_stmt ::=  "for" target_list "in" expression_list ":" suite       ["else" ":" suite]
+
+# "item" is a loop variable
+# Each iteration will hold one character at a time
+# Each character in the string is printed on a new line
+
+for item in "Python":
+    print(item)
+
+# Define a list of names using square brackets
+# In each iteration a new name is printed and each name is printed on a new line on the terminal.
+
+for item in ["Michelle", "John", "Sarah"]:
+    print(item)
+
+# Loop over a list of numbers
+# Each number is printed on a new line.
+for item in [1, 2, 3, 4]:
+    print(item)
+
+# Iterate over a large list of numbers
+# Use the built-in range function for creating a range of numbers
+
+# The numbers 0 - 9 are printed on the terminal
+# The number 10 is not included
+# When we call the range function, the range creates an object that we can iterate over (not a list!)
+# In each iteration, the object will spit out a new number
+for item in range(10):
+    print(item)
+
+# We can also work with a range of numbers
+# The numbers 5 - 9 are printed on the terminal
+for item in range(5, 10):
+    print(item)
+
+# The range function can optionally take a step
+# The numbers 5, 7, 9 are printed on the terminal
+for item in range(5, 10, 2):
+    print(item)
+
+*********************************************************************
+# Write a program to calculate the total cost of all the items in a shopping cart
+
+prices = [10, 20, 30]
+
+# Define a variable to calculate the total of all the prices
+# Set to 0
+total = 0
+
+# Use a for loop to iterate over the list of prices
+# Can call item anything
+# In the first iteration "price" will hold 10 and then 20, then 30
+# In each iteration we get the current price and add it to the total
+
+for price in prices:
+    # total = total + price or...use the augmented assignment operator to simplify this code
+    total += price
+print("Total Price: ", total)
+print(f"Total Price: {total}")
+
+

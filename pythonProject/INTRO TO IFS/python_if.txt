@@ -1,0 +1,218 @@
+# If statement
+# They allow us to build programs that can make decisions based on some condition
+
+# Start by defining a Boolean variable
+is_hot = True
+
+# Python automatically indents the cursor.
+# Anything wrote in this area will be executed. If the condition is true
+# Otherwise it will be ignored.
+if is_hot:
+    print("It's a hot day")
+print("Enjoy your day")
+
+*******************************************************************
+is_hot = False
+
+if is_hot:
+    print("It's a hot day")
+    print("Drink plenty of water")
+print("Enjoy your day")
+
+is_hot = True
+
+if is_hot:
+    print("It's a hot day")
+    print("Drink plenty of water")
+else:
+    print("It's a cold day")
+    print("Wear warm clothes")
+print("Enjoy your day")
+
+******************************************************************
+is_hot = False
+is_cold = True
+
+if is_hot:
+    print("It's a hot day")
+    print("Drink plenty of water")
+
+# Use an elif statement to define a second condition
+elif is_cold:
+    print("It's a cold day")
+    print("Wear warm clothes")
+else:
+    print("It's a lovely day")
+
+print("Enjoy your day")
+
+# When program is ran, Python interpreter will execute the first if statement,
+# However, in this case the first if statement is ignored because the condition has been set to False
+# Python interpreter will then evaluate the next condition and will execute this statement as is_cold is true
+
+# else statement will be ignored as one of these statements is true
+# Final line "Enjoy your day" will also be printed on the terminal
+
+********************************************************************************
+is_hot = False
+is_cold = False
+
+if is_hot:
+    print("It's a hot day")
+    print("Drink plenty of water")
+
+elif is_cold:
+    print("It's a cold day")
+    print("Wear warm clothes")
+else:
+    print("It's a lovely day")
+
+print("Enjoy your day")
+
+**********************************************************
+# Example:
+# Price of a house is $1M
+# If buyer has good credit,
+#   they need to put down 10% of the price of the property
+# Otherwise
+#   they need to put down 20%
+# Print the down payment required for a buyer with good credit
+
+price = 1000000
+good_credit = True
+
+if good_credit:
+    down_payment = 0.1 * price
+else:
+    down_payment = 0.2 * price
+print(f"Down Payment: ${down_payment}")
+
+# f (Formatted String)
+
+***************************************************
+# LOGICAL OPERATORS
+# Use them in situations where we have multiple conditions
+# if applicant has high income AND good credit
+#     Eligible for loan
+
+# AND operator
+# Both conditions should be True
+
+has_high_come = True
+has_good_credit = True
+
+if has_high_come and has_good_credit:
+    print("Eligible for loan")
+
+# If one of the statements is false the message will disappear
+
+# if applicant has high income or good credit
+#   Eligible for loan
+
+# OR operator
+# At least one condition should be true
+has_high_come = False
+has_good_credit = True
+
+if has_high_come or has_good_credit:
+    print("Eligible for loan")
+
+# NOT operator
+# if applicant has good credit AND doesn't have a criminal cord 
+Then they are elligible for a loan
+
+# False becomes true using the not operator
+
+has_good_credit = True
+has_criminal_record = False
+
+# We want to check if this applicant has good credits and no criminal record
+if has_good_credit and not has_criminal_record:
+    print("Eligible for loan")
+
+# not operator changes has_criminal_record to True
+
+*****************************************************
+# Comparison Operators
+# Used when you want to compare a variable with a value
+
+# if temperature is greater than 30
+#   it's a hot day
+# otherwise if it's less than 10
+#   it's a cold day
+# otherwise
+#   it's neither hot nor cold
+
+# Greater than
+# Greater than or equal to
+# Less than
+# Less than or equal to
+# Equality Operator (==)
+# Single equals (=) is only setting a value - assignment statement
+# Double equals (==) creates a boolean expression, producing a boolean value
+# Not equal to (!=)
+
+temperature = 30
+
+if temperature > 30:
+    print("It's a hot day")
+else:
+    print("It's not a hot day")
+
+**************************************************
+temperature = 35
+
+if temperature > 30:
+    print("It's a hot day")
+elif temperature < 30:
+    print("It's a cold day")
+else:
+    print("It's neither hot nor cold")
+
+
+temperature = 35
+
+if temperature == 30:
+    print("It's a hot day")
+elif temperature < 30:
+    print("It's a cold day")
+else:
+    print("It's neither hot nor cold")
+
+
+temperature = 35
+
+if temperature != 30:
+    print("It's a hot day")
+elif temperature < 30:
+    print("It's a cold day")
+else:
+    print("It's neither hot nor cold")
+
+**********************************************
+# Example...used in forms
+# if name is less than 3 characters long
+#   name must be at least 3 characters
+# otherwise if it's more than 50 characters long
+#   name can be a maximum of 50 characters
+# otherwise
+#   name looks good!
+
+name = "Michelle"
+
+if len(name) < 3:
+    print("Name must be at least 3 characters long")
+elif len(name) > 50:
+    print("Name must be a maximum of 50 characters")
+else:
+    print(f"Hi {name}, your name looks great!")
+
+
+
+
+
+
+
+
+
+

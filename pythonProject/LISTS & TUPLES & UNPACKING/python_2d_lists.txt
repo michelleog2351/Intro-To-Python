@@ -1,0 +1,106 @@
+# 2D Lists
+# They hava a lot of applications in data science and machine learning
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# To access an individual item in the matrix, we use square brackets
+# matrix[0] only returns the inner list
+# Using two square brackets, we can access individual elements from within the matrix.
+# matrix[0][1]
+print(matrix[0][1])
+
+# And we can also modify an element
+matrix[0][1] = 20
+
+# Using a nest loop to iterate over all the items in this matrix
+# In each iteration "row" will contain one item
+# 1 - 9 will be printed on the terminal
+for row in matrix:
+    for item in row:
+        print(item)
+
+# List Methods/Functions
+# These are the operations that you perform on a list
+# We can add new items to the list
+# We can remove existing items,
+# We can check for the existence of an item
+
+numbers = [5, 2, 1, 7, 4]
+print(numbers)
+
+# When we add the dot operator to numbers, we can see all the methods that are available in our list objects.
+numbers.append(20)
+print(numbers)
+
+# If we wanted to add an object to a certain index
+# We use the insert method, this takes two values (index, object)
+numbers.insert(0, 10)
+print(numbers)
+
+# To remove an item, we call the remove method
+numbers.remove(5)
+print(numbers)
+
+# If we want to clear all the items in the list, we call the clear method
+numbers.clear()
+print(numbers)
+
+# Pop method removes the last item in the list
+# The number 4 is gone from the list
+numbers.pop()
+print(numbers)
+
+# To check for the existence of an item in a list
+# We call the index method and pass a value
+# Print this expression on the terminal
+print(numbers.index(5))
+
+# Otherwise, if it is not in the list we get an error:
+print(numbers.index(50))
+# ValueError: 50 is not in the list
+
+# There is another way to check for the existence of an item using the in operator
+# The returned answer is False
+print(50 in numbers)
+
+# We have another method for counting the occurrences of an item
+print(numbers.count(5))
+
+# Sort method does return any values
+print(numbers.sort())
+
+# Instead, we call it to sort our list in ascending order
+numbers.sort()
+print(numbers)
+
+# We can call the reverse method which sorts our list in descending order
+numbers.reverse()
+print(numbers)
+
+# We can also call the copy method
+numbers2 = numbers.copy()
+numbers.append(10)
+
+# 10 has not been added to the list
+# The append method did not affect the original list
+print(numbers2)
+
+*****************************************************************************************
+# Write a program to remove the duplicates in a list.
+numbers = [2, 2, 4, 6, 3, 4, 6, 1]
+
+# First, we need to define another list and set it to an empty list
+uniques = []
+
+# We need to iterate over the first list, get each item, and check if we don't have the number in the uniques list,
+# Then we will add it to the second list.
+# The duplicates are removed.
+
+for number in numbers:
+    if number not in uniques:
+        uniques.append(number)
+print(uniques)

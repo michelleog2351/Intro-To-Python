@@ -1,0 +1,29 @@
+# Exceptions (and how we can handle errors)
+age = int(input("Age: "))
+
+print(age)
+
+# Let's run this program and look at the exit code of this program
+# Exit code 0 means our program terminated successfully and there were no errors
+
+# Now, let's say I entered in my name (string) instead of an integer
+# The program tells us this string "Michelle" does not contain a valid home number that can be converted to an integer
+# ValueError: invalid literal for int() with base 10: 'michelle'
+# Process finished with exit code 1
+# Exit code 1 (or anything but 0) means our exit code crashed
+# Let's practice using try accept blocks to handle exceptions that are raised in our programs
+
+# Instead of the entire program crashing (by the user entering an invalid value)
+
+try:
+    age = int(input("Age: "))
+    income = 2000
+    risk = income / age
+    print(age)
+except ZeroDivisionError:
+    print("Age cannot be 0")
+except ValueError:
+    print("Invalid value")
+
+
+# ZeroDivisionError

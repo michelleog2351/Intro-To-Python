@@ -1,0 +1,31 @@
+# Python Package Index (pypi) & pip
+
+# Even though python standard library is comprehensive and has so many modules for common tasks, it is far from complete
+
+***********************************************************
+# pypi.org
+# Python developers publish their packages so that other people can use and don't need to build everything from scratch
+
+# web scraping: You can build an engine, and it can browse a website and extract information from HDML files
+# This is the same technique that Google does to index various websites
+# They have several engines/web crawlers which are continuously looking at websites and extracting information from their pages
+
+# E.g. when you publish a blog post, Google's web crawler finds the title of your post and its keywords
+
+***********************************************************
+# pip is the tool that comes with a python installation
+# We use it to install or uninstall packages registered on pypi.org
+
+# Open up the Project Panel
+# Expand External Libraries
+# Next, expand python 3
+# Expand site packages: This is where all the packages (and sub-packages) that we installed with pip are stored
+# Here we can see various folders each containing the __init__.py file
+# When a folder contains this file it is treated as a package
+# Each folder also contains a list of modules
+
+
+
+
+
+

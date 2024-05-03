@@ -1,0 +1,24 @@
+# Reusable Functions
+# How to create function that returns values
+
+def emoji_converter(message):
+    words = message.split(" ")
+    emojis = {
+        ":)": "🙂",
+        ":D": "😀",
+        "XD": "😂",
+        "XP": "😝",
+        ":(": "😞",
+        ":O": "😯"
+    }
+    output = " "
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+
+
+message = input(">")
+print(emoji_converter(message))
+
+
+

@@ -1,0 +1,8 @@
+
+# django-admin startproject pyshop .
+# When we install django, it brings a command line utility called django-admin
+# This is a utility or program that we can execute from the command line or terminal
+
+# This programs takes various arguments, for example startproject
+# The period (.) refers to the current folder or directory
+# 

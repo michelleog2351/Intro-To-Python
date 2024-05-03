@@ -1,0 +1,170 @@
+*********WEE PYTHON TUTORIAL**********
+
+1) FIRST PYTHON PROGRAM
+# 1. Writing Your First Print Statement
+print("Michelle Ogunade")
+print()
+
+******************************************
+2) HOW CODE GETS EXECUTED
+# 2. Creating a little doggy using print statements
+print('o----')
+print(' ||||')
+print('*' * 10)
+print()
+
+******************************************
+3) VARIABLES
+# 3. Assigning values to variables 1
+price = 10
+print(price)
+print()
+
+# 4. Assigning values to variables 2
+name = "John"
+age = 20
+print(name, age)
+print()
+
+******************************************
+4) RECEIVING INPUT
+# 5. input() function - to call/execute the function
+# Value entered by user will be stored in variable
+# In print statement, print message (string)
+# Concatenate string to string variable
+# ("Hi " + name) is an example of an expression. an expression is a piece of code that produces a value
+name = input("What is your name? ")
+print("Hi " + name)
+print()
+
+# (a) Ask two qs: person's name and favourite colour.
+# Then, print a message like "Michelle likes blue"
+name = input("What is your name? ")
+colour = input("What is your favourite colour? ")
+print(name + " likes " + colour)
+
+5) TYPE CONVERSION
+# 6. Type conversion
+birth_year = input("Birth Year: ")
+# age = 2023 - birth_year....age = 2023 - "2005"
+# Incorrect method for subtraction.
+# TypeError: unsupported operand type(s) for -: 'int' and 'str'
+# Solution: Need to convert birth_year into integer then we will be able to subtract it from the current year
+age = 2023 - int(birth_year)
+print(age)
+# or:
+# birth_year = int(input("Birth Year: "))
+# age = 2023 - birth_year
+# print(age)
+
+# Example: Ask user their weight (in pounds), convert it to kilograms and print on the terminal.
+weight_in_pounds = int(input("What is your weight in pounds (lbs) ? "))
+weight_kg = weight_in_pounds * 0.45
+print(weight_kg)
+
+6) STRINGS
+# We can use either single (') or double (" ") quotes to define a string.
+# However there are certain cases where you have to use a specific form otherwise issues will incur.
+# course = 'Python for Beginners'
+# course = 'Python's Course for Beginners'
+
+# Python cannot interpret after the second apostrophe hence the squiggly red lines.
+# Therefore, the double speech quotes should be used instead to define the string.
+course = "Python's Course for Beginners"
+print(course)
+
+# Similarly, if we want to add wrap single quotes around a String (word) we will need to change the surrounding quotes to double quotes otherwise errors will incur.
+course = "Python's Course for 'Beginners' "
+print(course)
+
+# What if we wanted to write a string that is multiple lengths (multiline string) .i.e. an email
+# In this case, we would use triple quotes (''' ''')
+course = '''
+Hi John,
+
+Here is our first email to you.
+
+Thank you,
+The Support Team
+'''
+
+# To get the first character of the string, must use square brackets
+course = 'Python for Beginners'
+# Python strings are indexed starting from zero (0)
+print(course[0])
+
+# Assuming 0 is the first character, -1 is always the index of the last character of the string
+print(course[-1])
+print(course)
+
+# To extract a few characters from the string, use the colon (:)
+# The python interpreter will print out the characters starting from the index 0 to 3
+# However it does not return the character of the last index i.e. in this example, 3
+print(course[0:3])
+
+# In this case, a new variable called 'another' has been defined
+# This expression will return all the characters in the 'course' variable to the 'another' variable
+# An exact copy will be made of the 'course' variable
+course = 'Python for Beginners'
+another = course[:]
+print(another)
+
+# Example
+# (a)
+name = 'Jennifer'
+print(name[1:-1])
+# Solution: ennife
+
+# 7) FORMATTED STRINGS
+
+# Formatted Strings
+# We want to display this message John [Smith] is a coder on the terminal
+first_name = "John"
+last_name = "Smith"
+# String Concatenation
+# message = first_name + " [" + last_name + "] is a coder"
+# The solution above is not ideal as text gets more complicated it becomes harder to visualise the output
+
+# Formatted strings make it easier for the reader to understand and to visualise the output.
+# Prefix your string with f and then use curly braces to dynamically insert values into your strings.
+#
+msg = f"{first_name} [{last_name}] is a coder"
+print(msg)
+
+# String Methods
+
+# To calculate the number of characters in the string
+course = "Python for Beginners"
+print(len(course))
+# len is a built-in Python function (general purpose function)
+# Used for counting the number of characters in a string
+# Also used for counting the number of items in a list 
+
+# Dot Operator
+# Method (when a function belongs to something else or is specific to some kind of object).
+course = "Python for Beginners"
+print(course.title())
+
+# find() method is case-sensitive
+# Used to find a character or a sequence of characters in a string
+print(course.find('P'))
+# i.e. index of the first occurrence of the letter P is returned
+print(course.find('o'))
+
+# -1 is returned as there is no capital O in the string
+print(course.find('O'))
+# A sequence of characters can be passed.
+# 11 is returned as the word "Beginners" starts at index 11
+print(course.find('Beginners'))
+
+# replace() method is also case-sensitive
+print(course.replace("Beginners", "Absolute Beginners"))
+print(course.replace("P", "J"))
+
+# in operator returns a Boolean value
+print("Python" in course)
+
+
+
+
+

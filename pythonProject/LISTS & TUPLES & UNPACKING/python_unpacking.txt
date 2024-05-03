@@ -1,0 +1,20 @@
+# UNPACKING
+# Define a tuple (x, y, z)
+coordinates = (1, 2, 3)
+# x = coordinates[0]
+# y = coordinates[1]
+# z = coordinates[2]
+
+# Unpacking feature
+
+# When python interpreter sees this statement,
+# It will get the first item (1) in this tuple and assign it to the first variable (x)
+# Then it will get the second item (2 )and assign it to the second variable (y) and the same for the third.
+# Hence, we are unpacking this tuple into 3 variables
+x, y, z = coordinates
+print(x, y, z)
+
+# We can use this feature in lists as well
+# coordinates = [1, 2, 3]
+# x, y, z = coordinates
+# print(x, y, z)

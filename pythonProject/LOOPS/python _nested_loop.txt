@@ -1,0 +1,78 @@
+# Nested Loops
+# Adding one loop inside another loop
+# Makes it easy to generate a list of coordinates
+# (x, y)
+# (0, 0)
+# (0, 1)
+# (0, 2)
+# (1, 0)
+# (1, 1)
+# (1, 2)
+# A coordinate is a combination of an x and y value
+
+# Start with one loop
+# With this loop we can generate values for the x coordinate
+# (0, 1, 2, 3)
+for x in range(4):
+    print(x)
+
+# Now, for each x value i.e. 0, we should generate a y value
+# Inside the for loop, add another loop
+# Use a formatted string to display the coordinates
+
+# First iteration on line 1 (outer loop), x is 0
+for x in range(4):
+    # First iteration on line 2 (inner loop), y is 0
+    for y in range(3):
+        # (0, 0) will be printed on the terminal
+        print(f"({x}, {y})")
+# The control goes back to the inner loop, in this second iteration y will be incremented to 1.
+# But we are still in the first iteration of outer loop
+# Therefore, x is still 0
+
+# (0, 1) will now be printed on the terminal
+# This process continues until the inner loop is completed
+# The same process repeats when x = 1
+
+# Challenge: make an F shape using x's
+
+numbers = [5, 2, 5, 2, 2]
+
+# First we need to iterate over all the items in this list
+# "x_count" represents the number of x's on each line
+
+for x_count in numbers:
+
+    # Initially set output variable to an empty string
+    output = " "
+
+    # Use the range function to generate a sequence of numbers from 0 up to x_count variable
+    # In the first iteration, x_count is going to be 5
+    # So, range of 5 will generate the numbers 0, 1, 2, 3, 4
+    # Inner loop will be executed 5 times
+
+    for count in range(x_count):
+        # We need to append an "x" to our output variable
+        output += 'x'
+    print(output)
+
+# Extra Challenge: make an L shape using x's
+
+numbers = [1, 1, 1, 5]
+
+# First we need to iterate over all the items in this list
+# "x_count" represents the number of x's on each line
+for x_count in numbers:
+    # Initially set output variable to an empty string
+    output = " "
+    # Use the range function to generate a sequence of numbers from 0 up to x_count variable
+    # In the first iteration, x_count is going to be 5
+    # So, range of 5 will generate the numbers 0, 1, 2, 3, 4
+    # Inner loop will be executed 5 times
+    for count in range(x_count):
+        # We need to append an "x" to our output variable
+        output += 'x'
+    print(output)
+
+
+

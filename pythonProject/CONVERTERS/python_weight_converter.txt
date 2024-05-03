@@ -1,0 +1,15 @@
+# Use the input() to ask user for their weight
+# When int function is called it is given a value of the input function
+# Store the result in a variable called "weight"
+weight = int(input("Weight: "))
+unit = input("(L)bs or (K)g: ")
+
+# Use the .upper() function to make this condition not case-sensitive for upper and lowercase letters
+# Otherwise, code will not work
+
+if unit.upper() == "L":
+    converted = weight * 0.45
+    print(f"You are {converted} kilos")
+else:
+    converted = weight / 0.45
+    print(f"You are {converted} pounds")

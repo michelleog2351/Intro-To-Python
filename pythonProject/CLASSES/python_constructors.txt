@@ -1,0 +1,62 @@
+# Constructors
+# Problem: We can create Point objects without an x or y coordinate
+# E.g.
+# point = Point()
+# print(point.x)
+# We get an AttributeError: Point object has no attribute called "x"
+
+# Solution: We need to use a constructor
+# A constructor is a function that gets called at the time of creating an object (Point object)
+
+# When creating this Point object we want to pass values for x and y coordinates .ie. 10, 20
+# init is short for initialise
+
+# Define a new function with double underscored thus creating a constructor
+# the init method is called when an object is created
+# self, x, y are the parameters for this method
+# In the body of this method, we should read the values passed here, and use them to initialise our object
+# When we pass 10, 20 (arguments) they will be used for x and y parameters
+# self is a reference to the current object
+# (When we create a new Point object self references that object in memory
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def move(self):
+        print("move")
+
+    def draw(self):
+        print("draw")
+
+
+point = Point(10, 20)
+# point.x = 11 and x is updating
+print(point.x)
+
+# To change a value set point to the new vaiable
+
+
+*******************************************************************
+# # Example
+
+# Person
+#   name
+#   talk()
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+
+john = Person("John Smith")
+john.talk()
+
+bob = Person("Bob Smith")
+bob.talk()
+
+# Each object is a different instance of a Person class
+

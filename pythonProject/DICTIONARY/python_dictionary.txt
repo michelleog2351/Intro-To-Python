@@ -1,0 +1,115 @@
+# Dictionaries
+# Used in situations where you want to store information that come as key value pairs
+
+# Think of a customer...
+# Name: John Smith
+# Email: john@gmail.com
+# Phone: 1234
+
+# These are key value pairs
+# Each key (name, email, phone) is associated with a value
+
+# We use curly braces to define a dictionary
+# We can one or more key value pairs within the braces.
+
+# Each key has to be unique
+# Python does not allow any duplicates
+
+# Place the key you want to print in the square brackets which will return the value associated with the "name" key
+customer = {
+    "name": "John Smith",
+    "age": 30,
+    "is_verified": True
+}
+print(customer["name"])
+
+# What happens if you pass a key that doesn't exist
+# We get a key error because that key does not exist
+# print(customer["birthdate"])
+# KeyError: 'birthdate'
+# print(customer["birthdate"])
+
+# print(customer["Name"])
+# We get the same KeyError because there is no key with the exact same sequence of characters in the dictionary
+
+print(customer.get("birthdate"))
+# None value is returned;
+# None is an object that represents the absence of a value
+
+# We can optionally supply a default value
+# If the dictionary doesn't have this key, we can supply a default value
+
+# We can also update the customer's name
+# Squiggly warning lines appear to be telling us that we could simply put the updated name in between the braces
+# Instead of defining it twice
+
+customer["name"] = "Jack Smith"
+print(customer["name"])
+
+customer["birthdate"] = "Jan 1 1980"
+print(customer["birthdate"])
+
+# Dictionaries
+
+phone = input("Phone: ")
+
+digits_mapping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four"
+}
+
+# We need to loop through the phone string
+# We get each character and use it to access a key value pair from the dictionary
+# Use the get method incase the user enters some character that is not part of the dictionary.
+# Pass the "ch" as the key, and if we don't have a certain key (from user's input),
+# We can supply a default value .i.e an exclamation mark (!)
+1
+# We need to add this word to an output string, so we define it and set it initially to an empty string.
+
+output = " "
+for ch in phone:
+    # For each iteration, add it to the output string
+    output += digits_mapping.get(ch, "!") + " "
+print(output)
+
+************************************************************
+# EMOJI CONVERTER 
+# Create a dictionary that maps emoticons to emojis
+# Start by calling the input function
+# Use the greater than symbol to indicate to the user to type a message
+# This string entered by the user will be stored in the "message" variable
+# We need to split the string by a space (separator) using the split method
+# The split method looks for spaces and uses it as a boundary to separate the string into multiple words
+# Store this expression in "words" variable, and it will return a list with items (string)
+
+# Now, we need to define a dictionary for mapping special characters
+# i.e. we can map a smiley face to a string. In this string we add the relevant emoji
+# Now we need to look through this "words" list get each word and potentially map it to an emoji
+# We want to go to our "emojis" dictionary and see if we have this item with this word as the key
+# If we have an item with that key we get its value, otherwise we want to use the same word i.e. just return the string
+# We use the get method to get an item with the key word and to supply a default value
+message = input(">")
+words = message.split(" ")
+emojis = {
+    ":)": "🙂",
+    ":D": "😀",
+    "XD": "😂",
+    "XP": "😝",
+    ":(": "😞",
+    ":O": "😯"
+}
+
+# We need to define an output variable and set it to an empty string
+# Now we will get the return value of the get method and add it to our "output" variable,
+# Finally append a space at the end and print "output"
+output = " "
+for word in words:
+    output += emojis.get(word, word) + " "
+print(output)
+
+
+
+
+

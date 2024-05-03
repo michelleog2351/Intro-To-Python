@@ -1,0 +1,15 @@
+# COMMENTS
+
+# Used to add notes or comments to our programs
+# For explanations
+# As reminders to fix things
+# Use it as a reminder to fix things or clear things up
+# Use it to communicate things with other developers reading our code
+# i.e. why we have written this code in a certain way
+
+# Avoid being verbose and repetitive, for example, "print Sky is blue" and the next line is...
+# print("Sky is blue")
+
+# Use comments to explain why and how
+# As well as when making certain assumptions for developers to understand the code better
+

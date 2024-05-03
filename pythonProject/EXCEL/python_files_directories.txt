@@ -1,0 +1,68 @@
+# Files and Directories
+# On the python3 module index, we have a module called...
+# pathlib: Object-oriented filesystem paths
+# Meaning that this module provides classes that we can use to create objects to work with directories and files
+
+# Now we need to create a path object to reference a file or directory on our computer
+
+# Absolute path: starting from the root (of the hard disk)
+# Eg: Windows c:\Program Files\Microsoft
+# Mac or Linux /usr/local/bin
+
+# Relative path: starting from the current directory and go somewhere else
+from pathlib import Path
+
+# Create a path object and pass a string (we can add a file/directory in this case)
+
+path = Path("ecommerce")
+
+# We can check to see if a path exists and this returns a Boolean value
+print(path.exists())
+
+# We can create a new directory by calling the mkdir method
+# This method returns None which means it doesn't return any values.
+# We should the directory now in the project panel
+path = Path("emails")
+# print(path.mkdir())
+
+# To remove this directory, we call the rmdir method
+# And "None" is returned again
+print(path.rmdir())
+
+# We can also find all the files and directories in a given path eg. a program to automate something,
+# For example, you can iterate over all the spreadsheets in a directory, open them and process them
+
+
+*******************************************************************************
+Example:
+from pathlib import Path
+
+path = Path()
+# With this method, we can search for files and directories in your current path
+# In the first argument we need to pass a string that defines a search pattern
+# An asterisk includes everything, all files and all directories
+# We can optionally add an extension "*.*" or "*.py"
+print(path.glob("*"))
+print(path.glob("*.py"))
+
+# We can iterate or loop through generator objects,
+# So instead of printing them let's iterate over using a for loop
+
+path = Path()
+for file in path.glob("*"):
+    print(file)
+
+# To get all the files in the current directory
+path = Path()
+for file in path.glob("*.*"):
+    print(file)
+
+# All Python files in the current directory
+path = Path()
+for file in path.glob("*.py"):
+    print(file)
+
+# All Excel spreadsheets
+path = Path()
+for file in path.glob("*.py"):
+    print(file)

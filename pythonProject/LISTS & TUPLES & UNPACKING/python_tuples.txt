@@ -1,0 +1,27 @@
+# TUPLES
+# They are similar to lists, so we can use them to store a list of items,
+# But unlike lists, we cannot modify/add new items/remove existing items
+# Tuples are immutable (unchanging over time or unable to be changed)
+# We can't mutate/alter them
+
+# Define a list of numbers
+# We use square brackets to define lists and parenthesis to define tuples
+
+# numbers.
+
+# If we use the dot operator (as in lists to see the available methods), we see that there are only two methods.
+# The count method and index method
+# We use the count method to count the number of occurrences in an item
+# The index method: to find the index of the first occurrence of the item
+# We can only get information about the tuples we cannot change them
+
+# To get the first item
+numbers = (1, 2, 3)
+print(numbers[0])
+# However, if we try to change an item, we will get an error
+# numbers[0] = 10
+# TypeError: 'tuple' object does not support item assignment
+
+# If you want to create a list and want to make sure you don't accidentally modify the program,
+# it is better to use a tuple
+

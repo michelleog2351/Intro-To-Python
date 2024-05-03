@@ -1,0 +1,272 @@
+# Machine Learning
+# Applications in...
+# Self-driving cars 
+# Robotics
+# Language Processing
+# Vision Processing
+# Forecasting things i.e. stock market trends, weather, games etc..
+
+*************************************************************************************
+# Machine Learning in Action
+
+# Step 1: Import the data (often in the form of a csv file - comma-separated values)
+# You might have a database with lots of data you can simply export the data and store in a csv file for the purpose of our machine learning project.
+
+# Step 2: Clean the data: This involves tasks such as removing duplicating disks
+# (which we don't want to feed to the model as it will learn bad patterns in our data and produce inaccurate results from this)
+# so we have to make sure that our input data is in good and clean shape
+# Remove irrelevant data
+
+# Step 3: Split the data into training/test sets
+# Now that we have a clean data set, we need to split it into two segments...
+# One for training our model and the other for testing it, ensuring our model produces the correct result
+
+# Step 4: Create a model
+# This involves selecting an algorithm to analyse the data
+# Machine learning algorithms such as decision trees, neutral networks etc...
+
+# Step 5: Train the model
+# So we need to feed it training data. 
+# Our model will look for patterns in the data
+
+# Step 6: Make Predictions
+# Now we can ask our model to make predictions. Predictions aren't always accurate especially when you first start out
+
+# Step 7: Evaluate and Improve
+# We need to evaluate the predictions and measure their accuracy
+# Then we need to get back to our model
+# And either select a different algorithm that it's going to produce a more accurate result for the kind of problem we are solving
+# Or fine tune the parameters of our model
+
+# Each algorithm has parameters that we can modify to optimise the accuracy
+**********************************************************************************************
+
+# Libraries and Tools
+
+# Popular Python libraries that we use in machine learning projects
+# Numpy -- Provides a multi-dimensional array
+# Panda -- Data analysis library that provides a concept called data frame
+# A data frame is a 2-dimensional data structure similar to an Excel spreadsheet
+# MatPlotLib -- a 2-dimensional plotting library for creating graphs on plots
+# Scikit-Learn -- most popular, provides common algorithms like decision trees, neural networks etc..
+
+# When working with machine learning projects, we use an environment called jupyter for writing our code
+# Jupyter makes it much easier to inspect our data unlike vscode or in the terminal window (especially with long rows of data)
+
+# Type in the terminal...
+# Jupyter notebook and this will start the notebook server on your machine
+# Automatically opens localhost:8888/tree (semi-colon aka : ... port)
+# This is Jupyter dashboard
+# The Files tab, by default points to your Home directory
+# Create a notebook in Desktop folder
+# .ipynb files (jupyter notebook) similar to .py files but also contains additional information
+
+*******************************************************************************************************
+
+# How to load a data set from a csv file in jupyter
+
+# Importing a data set
+import pandas as pd
+df = pd.read_csv("vgsales.csv")
+df
+
+# Most useful methods and attributes for the dataframe
+
+# shape: (x, y) i.e. (16598, 11)
+# Over 16, 000 records and 11 columns
+df.shape
+
+# Call the describe() method to get some basic statistics about each column in our data set
+df.describe()
+
+# Returns 2-dimensional array
+# square brackets indicates the outer and inner arrays
+# The first element in our outer array is an array itself
+# i.e. The video game ranked 1 is called "Wii Sports"
+df.values
+
+*******************************************************************************************
+# Jupyter Shortcuts
+
+# The Jupyter Notebook has two different keyboard input modes
+# Edit mode allows you to type code or text into a cell and is indicated by a green bar
+# Command mode binds the keyboard to notebook level commands and is indicated by a blue bar
+
+# Press Esc to leave "edit" mode
+# Press H to see a list of all the shortcuts
+# Press B to insert a new cell Below
+# Press A to insert a new cell Above
+# Double press D to delete a cell
+
+# For a small project, to run "all cells"
+# Go to the "Cell" menu at the top and select "Run All" to run all the cells together
+# Luckily, Jupyter saves the output of each cell, so we don't have to rerun code that hasn't been changed
+# The notebook file includes our source code organised in cells and the output for each cell
+
+# We also have auto-completion and intellisense
+# dataframe (df) .tab brings out a list of all the available attributes and methods in this object
+# With the cursor on the method name,
+# Press Shift + Tab to see the tool tip that describes what the method does and the parameters it takes
+# Converting a line to comment: Ctrl + slash
+
+***********************************************************************************8888
+# A Real Problem
+
+# Steps
+# First we need to import our data
+# Then prepare or clean it (removing duplicates, null values etc..)
+# Split the data into training/data sets
+# Select a machine learning algorithm to build/create a model
+# Train our model
+# Ask it to make predictions
+# Finally, we evaluate our algorithm to see its accuracy
+# If it's not accurate we either fine tune our model or select a different algorithm
+
+# Download music_csv file
+# Nb!! 1 represents the men,
+# 0 represents the women
+
+# Step 1: Import the data
+import pandas as pd
+music_data = pd.read_csv('music.csv')
+music_data
+
+# Step 2: Prepare or clean the data
+# There are no duplicates or null values
+
+# Step 3, 4, 5: 
+# Split data set into two separate data sets
+# One with the first two columns which we refer to as the input set
+
+# And the other column we refer to as the output set i.e. genre
+# The output set contains the predictions
+# Eg. We are telling our model that if we have a user who is a 20-year-old male, they like hiphop
+
+# Once we train our model, we give it a new input set...
+# Eg. We have a new user who is a 21-year-old male, what genre of music does he like?
+# In our input set, we don't have a sample for this user, so we have to ask our model for predictions
+
+# The dataframe object ('music_data') has a method called drop
+# And pass columns as the parameter which is set to none by default (to specify the columns we want to drop)
+# Set columns to an array with one string, genre
+# This method doesn't modify the data set but will create a new data set without the 'genre' column
+#  By convention, use a capital "X" to represent that data set (to equal the expression)
+# Let's inspect this set
+
+# Next, we need to create our output set (predictions)
+# Using square brackets ['genre'] we can get all the values in a given column
+# By convention, use a lowercase "y" to represent the expression, let's inspect this set too
+# In this data set we only have the predictions for the answers
+
+# Step 6:
+# Learning and Predicting
+
+# Build a model using a machine learning algorithm
+
+# Simple algorithm - Decision tree
+# We don't have to explicitly program this algorithm, they are already implemented in a library called scikit learn
+# sklearn is the package that comes with scikit learn library
+# In this package we have a module called "tree"
+# And in this "tree" module we have a class called DecisionTreeClassifier
+# This class implements the decision tree algorithm
+
+# Create a new object called "model" and set it to a new instance "DecisionTreeClassifier()". Now we have a model.
+# Train the model to find patterns in the data
+# Call model.fit(X, y) method takes two data sets (input and output)
+# Ask model to make predictions call model.predict()
+# predict() method takes a 2d array, outer array and inner array.
+# Each element is an array,
+# predictions = model.predict([ [21, 1], [22, 0] ])
+# predictions
+
+
+# Step 7:
+# Calculate model's accuracy
+# We need to allocate 70-80% of our data to training and there 20-30% for testing
+# we can pass the data set we have for testing,
+# Get the predictions and compare them with the actual values in the testing set
+
+# from sklearn.model_selection import the function train_test_split
+# Now we can easily split our data set into two sets (training and testing)
+
+# Right after we define x and y sets,
+# We call this function and give it three arguments X, y and a keyword argument that specifies the size the data set
+# test_size=0.2 (20 percent)
+# This function returns a tuple, so we need to unpack it into 4 variables
+
+# The first two are the input sets and the last two are the output sets
+# When training our model, e only want to pass the trained data set
+# When making predictions we use "X_test" - that is data set that contains input values for testing
+# To calculate the accuracy,
+# We need to compare the predictions with the actual values we have in our output set for testing "y_test"
+
+# We need to import this module "metrics" and the function "accuracy_score"
+# And at the end of our code, call this function
+# Give it two arguments y_test which contains the expected values and predictions, which contains the actual values
+# (y_test, predictions)
+# This function returns an accuracy score between 0 and 1
+# The more data we give to our model to train and the cleaner it is, the better the result
+# Really important to clean data before training the model
+# if the test_size was changed to 0.8, the accuracy would immediately drop i.e 0.4
+
+**********************************************************************************************************************************
+# Model Persistence (and loading)
+
+# Training a model can be time-consuming, we don't need to keep re-training a model
+# import joblib from "externals"
+# joblib object has methods for saving and loading modules
+# So after we train our model, we call the dump() method to the joblib object
+# This takes two arguments:
+# The model and the name of the file you want to store the trained model in i.e. music-recommended.joblib
+
+# In our output an array is returned which contains the name of our model file
+# Comment out code for training a model this time,
+# This time we call the load() method without the "model" and print predictions to see if model is behaving correctly
+
+
+**********************************************************************************************************************************
+# Visualising a Decision Tree
+# Exporting model in a visual format
+
+# from sklearn import tree,
+# This method has an object for exporting our DecisionTree in a graphical format
+
+# After we train our model, call tree and its export function
+# tree.export_graphviz()
+# The first argument is our model
+# The second argument is the name of the output file using a keyword argument out_file='music-recommended.dot'
+# The dot format is a graph description language
+# Not too concerned about the order
+# Next parameter feature_names set to an array of two strings,
+# These are the features or the columns of the data set (age, gender)
+# So we can see the rules in our nodes
+
+# Next parameter class_names:
+# We set this to the unique list of genres, to display the class in each node (i.e. Classical, Acoustic)
+
+# y data set includes all the genres (classes) of our data,
+# However, they are repeated a few times in the data set,
+# So we call the "unique" function to the "y" object and sort it alphabetically
+
+# We set label='all',
+# So every node has labels that we can read
+
+# We set rounded=True,
+# So each node has rounded corners
+
+# filled=True
+# This means that each box (node) is filled with a colour
+
+# Ctrl + Enter to run
+
+# Open the output file in VS Code and install the correct extension to visualise the graph
+
+# This is exactly how a model makes predictions
+# We have a binary tree which means every node can have a maximum of two children
+# On top of each node there is a condition, depending on the result (True/False), we go to the child node on the left or right
+# Floating point numbers are the rules that our model generates on the patterns that it finds in our data set
+
+# As we give our model more data, the rules will change
+# The more columns/features we have in our data set, the more complex our DecisionTree is going to get
+
+

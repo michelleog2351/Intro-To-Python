@@ -1,0 +1,26 @@
+# MATH FUNCTIONS
+# Python 3 math module
+# A module in Python is a separate file which contains reusable code, functions
+# Modules are used to organise code into different files
+# i.e. Math module contains a bunch of reusable functions for performing mathematical calculations
+import math
+
+# math becomes an object (like a string) so we can directly access its functions using the dot operator
+
+print(math.ceil(2.9))
+print(math.floor(2.9))
+
+x = 2.9
+# Use built-in round function to round float to whole number
+print(round(x))
+
+# Absolute (abs) function
+# Give function a value, and it will always return a positive representation of the value, even if the value is negative
+
+x = 2.9
+print(abs(-2.9))
+# 2.9
+
+
+
+

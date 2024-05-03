@@ -1,0 +1,78 @@
+# While Loop
+# Used to execute a block of code multiple times
+# Useful for building interactive programs and games
+
+# While statement - while condition:
+# Define a variable called "i" (short for index) and set it to 1
+
+# Guessing Game
+# We want to give user a maximum of three guesses
+# Otherwise it's game over
+secret_number = 9
+
+# It is good practice to use meaningful and descriptive names for your variables
+# This make it easier for someone else to read your code
+# "i" represents the number of guesses the user has made
+# Right-click on "i" variable and then go to refactor and rename it.
+i = 0
+limit = 3
+
+while i < limit:
+    guess = int(input("Guess: "))
+    i += 1
+    if guess == secret_number:
+        print("You won!")
+        break
+else:
+    print("That's incorrect. Please try again")
+
+# Once the correct answer is entered, the loop terminates immediately
+
+**************************************************************
+# Car Game (Simulator)
+# We want to run this game/program until the user types quit
+command = ""
+started = False
+# We need to call either the upper/lower method of the string method
+
+while True:
+    # while command.lower() != "quit":
+    command = input("> ")
+    if command.lower() == "start" > "1":
+        if started:
+            print("Car has already started?!")
+        else:
+            started = True
+            print("Car started...Ready to go!")
+    elif command.lower() == "stop":
+        if not started:
+            print("Car has already been stopped?!")
+        else:
+            started = False
+            print("Car stopped.")
+    elif command.lower() == "help":
+        print(""" 
+start - to start the car
+stop - to stop the car
+quit - to quit the game
+""")
+        # The guidelines appeared with so much indentation
+        # When we use triple quotes, whatever is typed will be printed exactly as it is onto the terminal.
+        # Hence, the indentation that is printed on the terminal.
+    elif command.lower() == "quit":
+        break
+    else:
+        print("Sorry, I don't understand that...")
+
+# In programming, there is a term called "DRY". which is short for Don't Repeat Yourself (i.e. )
+# Instead of calling the lower method in each condition, we can call it when we get the input from the user initially...
+# command = input("> ").lower()
+
+# The input function always returns a string and commands will always be in lowercase, therefore we don't need to call this method in every condition
+
+# We can simplify the replica: while command.lower() != "quit":
+# To while True:
+# The block of code is going to execute repeatedly until we explicitly break out of it.
+
+# We need a boolean to store information to check if the car is started/stopped already. Yes or no? True or False?
+

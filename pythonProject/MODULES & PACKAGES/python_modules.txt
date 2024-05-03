@@ -1,0 +1,35 @@
+# Modules
+import converters
+
+print(converters.kg_to_lbs(70))
+
+import converters
+from converters import kg_to_lbs
+
+kg_to_lbs(100)
+
+print(converters.kg_to_lbs(70))
+
+# Modules
+# import utils
+# utils.find_max()
+
+from utils import find_max
+
+numbers = [10, 3, 6, 2]
+maximum = find_max(numbers)
+print(maximum)
+# or
+# print(find_max(numbers))
+****************************
+utils.py
+
+def find_max(numbers):
+    max = numbers[0]
+    for number in numbers:
+        if number > max:
+            max = number
+    return max
+
+
+
